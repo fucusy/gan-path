@@ -33,7 +33,10 @@ function mnist.loadDataset(fileName, maxLoad)
     labels = labels[{{1,nExample}}]
     print('<mnist> done')
 
-    local dataset = {}
+    local dataset = {}    
+    data:mul(1/data:std()*0.5)
+    data:add(-data:mean()+0.5)
+    
     dataset.data = data
     dataset.labels = labels
     dataset.order = torch.randperm(nExample)
@@ -41,8 +44,7 @@ function mnist.loadDataset(fileName, maxLoad)
     dataset.mean = data:mean()
 
     -- normalization
-    data:add(-dataset.mean)
-    data:mul(1/data:std())
+    
 
     function dataset:shuffle()
         dataset.order = torch.randperm(nExample)        
