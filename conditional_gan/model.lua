@@ -43,7 +43,7 @@ function get_model()
 
     local classBranch = nn.Sequential()
     classBranch:add(nn.Linear(10, 256))
-    noiseBranch:add(nn.BatchNormalization(256))
+    classBranch:add(nn.BatchNormalization(256))
     classBranch:add(nn.ReLU())
 
     p:add(noiseBranch)
@@ -57,7 +57,6 @@ function get_model()
     generator:add(nn.Linear(512, 1024))
     generator:add(nn.BatchNormalization(1024))
     generator:add(nn.ReLU())
-    generator:add(nn.Dropout(0.5))
     generator:add(nn.Linear(1024, 32*32))
     generator:add(nn.Tanh())
     generator:add(nn.Reshape(32, 32))
@@ -87,9 +86,11 @@ function get_model()
     discriminator:add(nn.Linear(2048, 512))
     discriminator:add(nn.BatchNormalization(512))
     discriminator:add(nn.LeakyReLU(0.2))
+    
     discriminator:add(nn.Linear(512, 256))
     discriminator:add(nn.BatchNormalization(256))
     discriminator:add(nn.LeakyReLU(0.2))
+    
     discriminator:add(nn.Linear(256, 2))
     discriminator:add(nn.LogSoftMax())
     

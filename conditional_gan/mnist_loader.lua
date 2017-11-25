@@ -33,9 +33,10 @@ function mnist.loadDataset(fileName, maxLoad)
     labels = labels[{{1,nExample}}]
     print('<mnist> done')
 
-    local dataset = {}    
-    data:mul(1/data:std()*0.5)
-    data:add(-data:mean()+0.5)
+    local dataset = {}
+    data:mul(1/255)
+    data:add(-0.5)
+    data:mul(1/0.5)
     
     dataset.data = data
     dataset.labels = labels
