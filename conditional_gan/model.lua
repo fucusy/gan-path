@@ -30,8 +30,6 @@ function init(model, mean, std)
 
 end
 
-
-
 function get_model()
     generator = nn.Sequential()
     local p = nn.ParallelTable()
@@ -94,9 +92,5 @@ function get_model()
     discriminator:add(nn.Linear(256, 2))
     discriminator:add(nn.LogSoftMax())
     
-    local mean = 0.0
-    local std = 0.02
-    init(generator, mean, std)
-    init(discriminator, mean, std)
     return generator, discriminator
 end
