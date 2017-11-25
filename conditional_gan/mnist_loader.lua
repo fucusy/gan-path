@@ -35,6 +35,8 @@ function mnist.loadDataset(fileName, maxLoad)
 
     local dataset = {}
     data:mul(1/255)
+    
+    -- take care the way of data preparation
     data:add(-0.5)
     data:mul(1/0.5)
     
