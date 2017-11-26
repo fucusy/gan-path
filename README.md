@@ -2,7 +2,8 @@
 
 ## Purpose
 
-Learning various generative adversarial network by **pratice**.
+Learning various generative adversarial network by **pratice** of writing
+code based on Torch/Lua.
 
 ## Dependency
 
