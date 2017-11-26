@@ -19,12 +19,13 @@ GAN timeline from [here](https://github.com/dongb5/GAN-Timeline)
 
 ### GAN introducted by Ian Goodfellow at NIPS 2014, "Generative Adversarial Networks"
 
-code is located at dirtory `gan`,  find `Train.ipynb`, run it in IPython with
+code is located at dirtory `gan`,  find [Train.ipynb](https://github.com/fucusy/gan-path/blob/master/conditional_gan/Train.ipynb)
+, run it in IPython with
 iTorch.
 
 ### GAN with condition by Mehdi Mirza at arXiv 2014, "Conditional Generative Adversarial Nets" 
 
-code is located at dirtory `conditional_gan`, find `Train.ipynb`, run it in 
+code is located at dirtory `conditional_gan`, find [Train.ipynb](https://github.com/fucusy/gan-path/blob/master/gan/Train.ipynb), run it in 
 IPython with iTorch.
 
 
