@@ -26,7 +26,7 @@ iTorch.
 ### GAN with condition by Mehdi Mirza at arXiv 2014, "Conditional Generative Adversarial Nets" 
 
 code is located at dirtory `conditional_gan`, find [Train.ipynb](https://github.com/fucusy/gan-path/blob/master/gan/Train.ipynb), run it in 
-IPython with iTorch.
+IPython with iTorch. Adtop GAN logics from [pytorch version GAN](https://github.com/fucusy/pytorch-MNIST-CelebA-cGAN-cDCGAN/blob/master/pytorch_MNIST_cGAN.py) which forked from [znxlwm/pytorch-MNIST-CelebA-cGAN-cDCGAN](https://github.com/znxlwm/pytorch-MNIST-CelebA-cGAN-cDCGAN)
 
 
 ### GAN with deep convolutional network from Radford, Alec at arXiv 2015, "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks" 
